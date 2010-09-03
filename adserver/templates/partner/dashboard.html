@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+Partner information will come here
+
+<div><label>Name</label>: <input type="text"></div>
+<div><label>Domain</label>: <input type="text"></div>
+
+<div><label>Super partner?</label>: <input type="checkbox"></div>
+
+<div>key to make a call to the dynamic api url: <strong>Not generated</strong> &nbsp; <input type="submit" value="Generate"></div>
+<div>key to make a call to chat.pw to add users: <strong>Not generated</strong> &nbsp; <input type="submit" value="Generate"></div>
+<div>key to make a call to partners app super partner api: <strong>Not generated</strong> &nbsp; <input type="submit" value="Generate"></div>
+
+<div><label>IP addresses of MX servers</label>: <input type="text"></div>
+<div><label>Registrar tag name</label>: <input type="text"></div>
+<br>
+<div><input type="submit" value="Save">&nbsp;<input type="submit" value="Cancel"></div>
+
+{% endblock %}

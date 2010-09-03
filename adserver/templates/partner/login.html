@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if inactive %}
+The user has not been approved yet. Please click here to contact the admin.
+{% endif %}
+
+<form method="post" action="{% url adserver.partner.views.login_user %}">{% csrf_token %}
+{{ form.as_ul }}
+<input type="submit" value="login" />
+<input type="hidden" name="next" value="/" />
+</form>
+<br><p><br>
+<a href="/">Home</a>&nbsp;<a href="/admin">Admin</a>
+
+{% endblock %}

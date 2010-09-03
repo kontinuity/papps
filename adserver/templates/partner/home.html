@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+<!-- INTRO -->
+<div id="intro">
+	<div class="content">			
+		<div class="lfloat" id="login-form">
+			<form method="post" action="{% url adserver.partner.views.login_user %}" id="login">				
+			<div class="form-wrapper">
+				<span>Partner Login:</span>
+				{{ form.username }}
+				{{ form.password }}
+				<a href="#" onclick="javascript: document.forms.login.submit(); return false;" class="home-signup-btn"><span>Login</span></a>
+			</div>
+			{% csrf_token %}
+			<input type="hidden" name="next" value="/" />
+			</form>
+		</div>
+
+		<!-- SCREEN SHOTS -->
+		<div class="lfloat" id="app-screenshots">					
+			<div class="wrapper">
+				<a href="/signup"><img src="/media/signup.gif"></a>
+			</div>					
+		</div>
+		<!-- /SCREEN SHOTS -->
+		
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- /INTRO -->
+
+{%endblock%}

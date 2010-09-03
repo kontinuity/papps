@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Chat.pw Partner | {% block title %}Home{% endblock %}</title>
+	<script type="text/javascript">// To Avoid unStyled Flash</script>
+	<link rel="stylesheet" type="text/css" href="/media/style.css">
+	{% block extrahead %}{% endblock %}	
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<div id="header">
+		
+		<div class="logo-full">
+			<!-- LOGO -->
+			<div class="logo"></div>
+			<!-- /LOGO -->
+			{% if user.is_authenticated %}
+			<a style="color: #fff;" href="/logout?next=/">Logout</a>
+			{% endif %}				
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- /HEADER -->
+	
+	{% block content %}An unknown issue has occurred.{% endblock %}
+
+	<!-- FOOTER -->
+	<div class="footer-wrapper">
+		<div id="footer">
+		</div>
+	</div>
+	<!-- /FOOTER -->
+			
+</body>
+</html>
